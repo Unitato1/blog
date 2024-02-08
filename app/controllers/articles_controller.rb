@@ -2,6 +2,10 @@
 # generator for creating routs and controlers and all that stuff
 class ArticlesController < ApplicationController
   def index
-    @msg = "Hello World"
+    @articles = Article.all
+  end
+
+  def show
+    @article = Article.find(params[:id])
   end
 end
